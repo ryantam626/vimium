@@ -119,7 +119,23 @@ const Marks = {
         }
       }
     });
-  }
+  },
+
+  javascriptRunner(count, {registryEntry}) {
+    console.log('ffff', registryEntry)
+    let scriptTag = document.createElement("script")
+    scriptTag.lang = "Javascript"
+    scriptTag.type = "text/javascript"
+    scriptTag.appendChild(
+        document.createTextNode(
+            decodeURIComponent(
+                registryEntry.options.js
+            )
+        )
+    )
+
+    document.documentElement.insertBefore(scriptTag, null)
+  },
 };
 
 window.Marks =  Marks;

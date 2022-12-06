@@ -218,7 +218,8 @@ const Commands = {
       "nextFrame",
       "mainFrame",
       "Marks.activateCreateMode",
-      "Marks.activateGotoMode"],
+      "Marks.activateGotoMode",
+      "js"],
     vomnibarCommands:
       ["Vomnibar.activate",
       "Vomnibar.activateInNewTab",
@@ -278,7 +279,8 @@ const Commands = {
     "closeOtherTabs",
     "enterVisualLineMode",
     "toggleViewSource",
-    "passNextKey"]
+    "passNextKey",
+    "js"]
 };
 
 const defaultKeyMappings = {
@@ -455,7 +457,9 @@ const commandDescriptions = {
   mainFrame: ["Select the page's main/top frame", { topFrame: true, noRepeat: true }],
 
   "Marks.activateCreateMode": ["Create a new mark", { noRepeat: true }],
-  "Marks.activateGotoMode": ["Go to a mark", { noRepeat: true }]
+  "Marks.activateGotoMode": ["Go to a mark", { noRepeat: true }],
+
+  js: ["Execute some custom javascript", { noRepeat: true }]
 };
 
 Commands.init();

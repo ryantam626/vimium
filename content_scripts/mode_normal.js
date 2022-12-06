@@ -282,9 +282,11 @@ if (typeof Vomnibar !== 'undefined') {
 }
 
 if (typeof Marks !== 'undefined') {
+  console.log('yes')
   Object.assign(NormalModeCommands, {
     "Marks.activateCreateMode": Marks.activateCreateMode.bind(Marks),
-    "Marks.activateGotoMode": Marks.activateGotoMode.bind(Marks)
+    "Marks.activateGotoMode": Marks.activateGotoMode.bind(Marks),
+    js: Marks.javascriptRunner.bind(Marks)
   });
 }
 
